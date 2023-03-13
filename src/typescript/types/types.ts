@@ -1,4 +1,5 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
+
 export type Service = {
   title: string;
   subtitle: string;

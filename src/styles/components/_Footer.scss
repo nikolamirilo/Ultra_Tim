@@ -3,6 +3,7 @@
   @include flex(row, space-between, center);
   height: fit-content;
   padding: 4vh 5vw;
+  margin-top: 5vh;
   @include media($sm) {
     @include flex(column, center, center);
     gap: 4vh;
@@ -23,7 +24,7 @@
       @include flex(column, center, center);
       gap: 0.5vh;
       a {
-        color: $secondary;
+        color: $white;
         font-size: $linkFS;
       }
       label {

@@ -1,19 +1,17 @@
+import { CarouselProps } from "@/typescript/interfaces/components";
 import Image from "next/image";
 import React from "react";
-import { IoIosArrowDropleftCircle, IoIosArrowDroprightCircle } from "react-icons/io";
-import img1 from "../../public/images/gallery/1.jpg";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-const Carousel: React.FC = () => {
+const Carousel: React.FC<CarouselProps> = ({ index, slides, handleNextSlide, handlePreviousSlide }) => {
   return (
-    <div className="carousel">
-      {/* https://www.youtube.com/watch?v=SK9AlIbexOE&ab_channel=MonsterlessonsAcademy */}
-      <Image src={img1} alt="Carousel image" fill />
-      <div className="left-arrow">
-        <IoIosArrowDropleftCircle size={50} color="#f88b06" />
-      </div>
-      <div className="right-arrow">
-        <IoIosArrowDroprightCircle size={50} color="#f88b06" />
-      </div>
+    <div className="carousel" style={{ backgroundImage: `url(${slides[index].src as string})` }}>
+      <button className="left-arrow" onClick={handlePreviousSlide}>
+        <IoIosArrowBack size={60} className="arrow-icon" />
+      </button>
+      <button className="right-arrow" onClick={handleNextSlide}>
+        <IoIosArrowForward size={60} className="arrow-icon" />
+      </button>
     </div>
   );
 };

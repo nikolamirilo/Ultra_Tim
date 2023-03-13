@@ -7,16 +7,16 @@ const Navbar: React.FC = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <Image src={logo} alt="Logo" style={{ margin: "1vh 0" }} />
+        <Image src={logo} alt="Logo" style={{ margin: "0.5vh 0" }} />
       </div>
       <input id="menu-toggle" type="checkbox" />
       <label className="menu-button-container" htmlFor="menu-toggle">
         <div className="menu-button"></div>
       </label>
       <div className="links">
-        <Link href="/">Home</Link>
-        <Link href="/offer">Offer</Link>
-        <Link href="/contact">Contact</Link>
+        <Link href="/">Početna</Link>
+        <Link href="/offer">Ponuda</Link>
+        <Link href="/contact">Kontakt</Link>
       </div>
     </nav>
   );

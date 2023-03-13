@@ -5,9 +5,10 @@
   width: 100%;
   h1 {
     font-size: 2.5rem;
-  }
-  h2 {
-    font-size: 1.6rem;
+    text-align: center;
+    @include media($xs) {
+      width: 80%;
+    }
   }
   .cards-container {
     @include cardsContainerStyle;

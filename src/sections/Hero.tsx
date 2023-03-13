@@ -5,21 +5,13 @@ import React from "react";
 
 const Hero: React.FC<HeroProps> = ({ title, subtitle, image }) => {
   return (
-    <section id="hero">
-      <Image
-        src={image}
-        alt="Office"
-        fill
-        placeholder="blur"
-        blurDataURL="/images/office-modified.webp"
-        priority
-      />
+    <section id="hero" style={{ backgroundImage: `url(${image})` }}>
       <div className="hero-content">
-        <h1>{title}</h1>
+        <>{title}</>
         <h2>{subtitle}</h2>
         <div className="hero-buttons">
-          <Link href="#about">About</Link>
-          <Link href="#services">Services</Link>
+          <Link href="#about">O nama</Link>
+          <Link href="#services">Usluge</Link>
         </div>
       </div>
     </section>
