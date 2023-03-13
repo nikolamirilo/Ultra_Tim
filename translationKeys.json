@@ -1,0 +1,40 @@
+{
+  "navbar": ["Home", "Offer", "Contact"],
+  "hero": {
+    "title": "",
+    "subtitle": ""
+  },
+  "about": {
+    "paragraph": ""
+  },
+  "services": {
+    "primary": [
+      {
+        "title": "",
+        "subtitle": ""
+      },
+      {
+        "title": "",
+        "subtitle": ""
+      },
+      {
+        "title": "",
+        "subtitle": ""
+      }
+    ],
+    "secondary": [
+      {
+        "title": "",
+        "subtitle": ""
+      },
+      {
+        "title": "",
+        "subtitle": ""
+      },
+      {
+        "title": "",
+        "subtitle": ""
+      }
+    ]
+  }
+}

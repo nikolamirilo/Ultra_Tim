@@ -1,0 +1,73 @@
+.form {
+  height: fit-content;
+  width: 50%;
+  border: 2px solid $primary;
+  @include flex(column, space-between, center);
+  background-color: #ffffff;
+  @include boxShadow;
+  border-radius: 10px;
+  gap: 2vh;
+  padding: 2rem;
+  @include media($md) {
+    width: 100%;
+    padding: 1rem;
+  }
+  @include media($xxs) {
+    padding: 1rem;
+  }
+  h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 400;
+    color: $primary;
+    margin: 2vh 0;
+  }
+
+  input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid $primary;
+    padding: 0.4rem 1rem;
+    color: $primary;
+    font-size: 1.2rem;
+    &:focus,
+    &:active {
+      border: 1px solid $primary;
+      outline: none;
+    }
+  }
+  input:-webkit-autofill {
+    -webkit-text-fill-color: $primary;
+  }
+  textarea {
+    width: 100%;
+    border-radius: 10px;
+    border: 1px solid $primary;
+    color: $primary;
+    resize: none;
+    padding: 0.4rem 1rem;
+    min-height: 25vh;
+    height: fit-content;
+    font-size: 1.2rem;
+    @include media($xs) {
+      min-height: 25vh;
+    }
+    &:focus,
+    &:active {
+      border: 1px solid $secondary;
+      outline: none;
+    }
+  }
+  button {
+    font-size: 1.2rem;
+    background-color: $primary;
+    text-decoration: none;
+    color: $white;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 0.5rem 2rem;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

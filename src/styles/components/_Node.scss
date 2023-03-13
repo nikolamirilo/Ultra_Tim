@@ -1,0 +1,27 @@
+.node {
+  width: 100%;
+  height: fit-content;
+  @include flex(row, center, center);
+  @include media($xs) {
+    @include flex(column, center, center);
+  }
+  gap: 1rem;
+  &:nth-child(even) {
+    @include flex(row-reverse, center, center);
+    @include media($xs) {
+      @include flex(column, center, center);
+    }
+  }
+  p {
+    width: 20rem;
+    @include media($xs) {
+      width: 96%;
+      text-align: center;
+    }
+  }
+  .image {
+    @include backgroundObjectImage(12rem, 12rem);
+    border-radius: 100%;
+    border: 2px solid $secondary;
+  }
+}

@@ -1,0 +1,23 @@
+.single-project {
+  @include flex(row, space-around, center);
+  @include media($xs) {
+    @include flex(column, center, center);
+  }
+  padding: 5vh 5vw;
+  width: 100%;
+  min-height: 75vh;
+  height: fit-content;
+  .content,
+  .image {
+    @include flex(column, center, center);
+  }
+  .content {
+    p {
+      width: 50%;
+      text-align: center;
+    }
+    h1 {
+      text-align: center;
+    }
+  }
+}

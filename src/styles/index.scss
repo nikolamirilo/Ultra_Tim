@@ -1,0 +1,24 @@
+@import "./global/index";
+@import "./components/index";
+@import "./sections/index";
+@import "./pages/index";
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
+  main {
+    min-height: 75vh;
+    height: fit-content;
+    scroll-behavior: smooth;
+  }
+}
+::selection {
+  background: $secondary;
+}

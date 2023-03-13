@@ -1,0 +1,64 @@
+#hero {
+  width: 100%;
+  height: 100vh;
+  color: $white;
+  position: relative;
+  @include contentPadding;
+  @include flex(row, flex-start, center);
+  @include media($md) {
+    @include flex(row, center, center);
+    width: 100%;
+  }
+  .hero-content {
+    position: relative;
+    bottom: 10vh;
+    @include flex(column, center, center);
+    width: 50%;
+    gap: 2vh;
+    @include media($md) {
+      @include flex(column, center, center);
+      width: 100%;
+    }
+    h1 {
+      font-size: 3rem;
+      text-align: center;
+      width: 100%;
+      @include media($xxs) {
+        font-size: 2.2rem;
+        margin-top: 5vh;
+        width: 100%;
+      }
+    }
+    h2 {
+      font-size: $linkFS;
+      width: 80%;
+      text-align: center;
+      font-weight: 500;
+      @include media($xxs) {
+        font-size: 1.2rem;
+      }
+    }
+    .hero-buttons {
+      @include flex(row, center, center);
+      margin-top: 3vh;
+      gap: 1rem;
+      @include media($xs) {
+        @include flex(column, center, center);
+      }
+      a {
+        @include buttonStyle;
+        text-decoration: none;
+        padding: 0.6rem 3rem;
+        color: $white;
+        border: none;
+        &:last-child {
+          background-color: transparent;
+          border: 1px solid $secondary;
+          &:hover {
+            background-color: $secondary;
+          }
+        }
+      }
+    }
+  }
+}
