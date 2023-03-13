@@ -3,12 +3,13 @@ import Link from "next/link";
 import React from "react";
 import { AiOutlineGithub, AiOutlineInstagram } from "react-icons/ai";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import logo from "../../public/logo.png";
 
 const Footer: React.FC = () => {
   return (
     <footer className="footer">
       <div className="left-content">
-        <Image src="/logo.webp" alt="Logo" width={80} height={80} />
+        <Image src={logo} alt="Logo" />
       </div>
       <div className="middle-content">
         <div className="email">

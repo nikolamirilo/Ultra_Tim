@@ -2,10 +2,23 @@ import { Hero } from "@/sections";
 import { HomeProps } from "@/typescript/interfaces/pages";
 import dynamic from "next/dynamic";
 import Head from "next/head";
-import React from "react";
+import React, { Suspense } from "react";
+import data from "../../translationKeys.json";
 const Services = dynamic(() => import("@/sections/Services"), { suspense: true });
+const About = dynamic(() => import("@/sections/About"), { suspense: true });
 
-const Home: React.FC<HomeProps> = () => {
+export const getStaticProps = async () => {
+  const primaryServices = await data.services.primary;
+  const secondaryServices = await data.services.secondary;
+  return {
+    props: {
+      primaryServices,
+      secondaryServices,
+    },
+  };
+};
+
+const Home: React.FC<HomeProps> = ({ primaryServices, secondaryServices }) => {
   return (
     <main className="home">
       <Head>
@@ -19,9 +32,18 @@ const Home: React.FC<HomeProps> = () => {
         subtitle="Utilizing my skills in project management and programming to drive successful results by effective planning and executing projects, delivering on deadlines and goals, and developing customized solutions through programming."
         image="/images/office.webp"
       />
-      {/* <Suspense fallback={<h2>Loading...</h2>}>
-        <Services data={services} />
-      </Suspense> */}
+      <div id="test">
+        <Suspense fallback={<h2>Loading...</h2>}>
+          <Services data={primaryServices} type="primary" />
+        </Suspense>
+      </div>
+
+      <Suspense fallback={<h2>Loading...</h2>}>
+        <Services data={secondaryServices} type="secondary" />
+      </Suspense>
+      <Suspense fallback={<h2>Loading...</h2>}>
+        <About />
+      </Suspense>
     </main>
   );
 };

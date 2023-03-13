@@ -6,6 +6,8 @@
   border-radius: 10px;
   padding-bottom: 0.5rem;
   @include boxShadow;
+  width: 400px;
+  height: 300px;
   cursor: pointer;
   img {
     border-radius: 10px;

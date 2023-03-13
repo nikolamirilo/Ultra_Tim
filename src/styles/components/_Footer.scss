@@ -10,6 +10,10 @@
   }
   .left-content {
     @include flex(column, center, center);
+    img {
+      width: auto;
+      height: 70px;
+    }
   }
   .middle-content {
     @include flex(column, center, center);

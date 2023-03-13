@@ -1,7 +1,5 @@
-import Image from "next/image";
-import { useRouter } from "next/router";
 import React from "react";
-import { Dna } from "react-loader-spinner";
+import { Triangle } from "react-loader-spinner";
 
 const Loader: React.FC = () => {
   return (
@@ -15,17 +13,16 @@ const Loader: React.FC = () => {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        background: "#001f3f",
+        background: "#4169e1",
         zIndex: "1000",
       }}
     >
-      <Dna
+      <Triangle
         visible={true}
         height="120"
         width="120"
-        ariaLabel="dna-loading"
-        wrapperStyle={{}}
-        wrapperClass="dna-wrapper"
+        ariaLabel="triangle-loading"
+        color="#f88b06"
       />
     </div>
   );
