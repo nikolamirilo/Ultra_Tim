@@ -6,6 +6,7 @@ import React, { Suspense } from "react";
 import data from "../../translationKeys.json";
 const Services = dynamic(() => import("@/sections/Services"), { suspense: true });
 const About = dynamic(() => import("@/sections/About"), { suspense: true });
+const Gallery = dynamic(() => import("@/sections/Gallery"), { suspense: true });
 
 export const getStaticProps = async () => {
   const primaryServices = await data.services.primary;
@@ -43,6 +44,9 @@ const Home: React.FC<HomeProps> = ({ primaryServices, secondaryServices }) => {
       </Suspense>
       <Suspense fallback={<h2>Loading...</h2>}>
         <About />
+      </Suspense>
+      <Suspense fallback={<h2>Loading...</h2>}>
+        <Gallery />
       </Suspense>
     </main>
   );

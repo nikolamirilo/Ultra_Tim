@@ -1,0 +1,24 @@
+.carousel {
+  width: 80%;
+  min-height: 60vh;
+  height: fit-content;
+  position: relative;
+  background-position: center center;
+  background-size: cover;
+  @include media($md) {
+    width: 100%;
+  }
+  img {
+    border-radius: 10px;
+  }
+  .left-arrow {
+    position: absolute;
+    left: 0;
+    top: 42%;
+  }
+  .right-arrow {
+    position: absolute;
+    right: 0;
+    top: 42%;
+  }
+}

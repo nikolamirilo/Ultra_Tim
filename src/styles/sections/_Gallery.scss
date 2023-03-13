@@ -1,3 +1,5 @@
 #gallery {
   @include sectionStyle;
+  height: fit-content;
+  @include flex(row, center, center);
 }

@@ -1,6 +1,5 @@
 .card {
   @include flex(column, center, center);
-  background-color: #fafafa;
   gap: 0.5rem;
   width: fit-content;
   border-radius: 10px;
