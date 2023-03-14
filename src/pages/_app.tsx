@@ -1,5 +1,4 @@
 import Loader from "@/components/Loader";
-import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useEffect, useState } from "react";
@@ -25,4 +24,4 @@ const App = ({ Component, pageProps }: AppProps) => {
     </>
   );
 };
-export default appWithTranslation(App);
+export default App;

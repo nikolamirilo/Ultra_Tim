@@ -1,12 +1,13 @@
-const { i18n } = await import("./next-i18next.config.js");
-
 const nextConfig = {
   modularizeImports: {
     "react-icons": {
       transform: "react-icons/{{member}}",
     },
   },
-  i18n,
+  // i18n: {
+  //   defaultLocale: "sr",
+  //   locales: ["sr", "en"],
+  // },
 };
 
 export default nextConfig;

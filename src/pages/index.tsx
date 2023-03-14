@@ -11,12 +11,12 @@ const Services = dynamic(() => import("@/sections/Services"), { suspense: true }
 const About = dynamic(() => import("@/sections/About"), { suspense: true });
 const Gallery = dynamic(() => import("@/sections/Gallery"), { suspense: true });
 
-export const getStaticProps = async ({ locale }) => {
+export const getStaticProps = async () => {
   const primaryServices = await data.services.primary;
   const secondaryServices = await data.services.secondary;
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["standard"])),
+      // ...(await serverSideTranslations(locale, ["common"])),
       primaryServices,
       secondaryServices,
     },
@@ -37,7 +37,7 @@ const Home: React.FC<HomeProps> = ({ primaryServices, secondaryServices }) => {
         <Hero
           title={
             <h1>
-              {t("standard:Kontakt")} <span>S</span>
+              Ultra Tim <span>S</span>
             </h1>
           }
           subtitle="Naša firma je specijalizovana za pružanje usluga selidbe, transporta, pakovanja i gradjevinskih usluga. Svojim klijentima nudimo najpovoljnije cene uz najviši nivo profesionalizma i pažljivog rukovanja sa njihovim stvarima ili projektima. Naš tim se sastoji od stručnih i iskusnih radnika koji su posvećeni da svaki posao obave sa maksimalnom efikasnošću i pažnjom prema klijentima."
