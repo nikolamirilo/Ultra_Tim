@@ -1,6 +1,5 @@
-import { Carousel } from "@/components";
-import type { StaticImageData } from "next/image";
-import React, { useState, useEffect } from "react";
+import Carousel from "@/components/Carousel";
+import React, { useEffect, useState } from "react";
 import img1 from "../../public/images/gallery/1.jpg";
 import img2 from "../../public/images/gallery/2.jpg";
 import img3 from "../../public/images/gallery/3.webp";

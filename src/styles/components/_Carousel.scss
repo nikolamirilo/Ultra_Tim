@@ -1,15 +1,15 @@
 .carousel {
-  height: fit-content;
+  height: 60vh;
   position: relative;
   @include backgroundObjectImage(60%, 60vh);
   @include fadeAnimation(0.5s, 0s);
   @include media($lg) {
     width: 80%;
-    min-height: 50vh;
+    height: 50vh;
   }
-  @include media($md) {
+  @include media($xs) {
     width: 100%;
-    min-height: 30vh;
+    height: 40vh;
   }
   .left-arrow {
     position: absolute;
@@ -26,6 +26,7 @@
     height: 100%;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.568);
+    width: 3rem;
     .arrow-icon {
       // background-color: $secondary;
       fill: $white;

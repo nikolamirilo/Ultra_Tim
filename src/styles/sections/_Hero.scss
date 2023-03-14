@@ -1,6 +1,7 @@
 #hero {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: fit-content;
   color: $white;
   position: relative;
   @include backgroundObjectImage(100%, 100vh);
@@ -21,18 +22,24 @@
       @include flex(column, center, center);
       width: 100%;
     }
+    @include media($xs) {
+      width: 100%;
+      bottom: 4vh;
+    }
     h1 {
       font-size: 4rem;
       text-align: center;
       width: 100%;
+      @include media($xs) {
+        font-size: 3.3rem;
+      }
       span {
         font-size: 5rem;
         font-style: italic;
         color: $secondary;
-      }
-      @include media($xxs) {
-        margin-top: 5vh;
-        width: 100%;
+        @include media($xs) {
+          font-size: 4rem;
+        }
       }
     }
     h2 {
@@ -42,6 +49,7 @@
       font-weight: 500;
       @include media($xxs) {
         font-size: 1.2rem;
+        width: 96%;
       }
     }
     .hero-buttons {

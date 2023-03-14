@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+const { i18n } = await import("./next-i18next.config.js");
 
 const nextConfig = {
   modularizeImports: {
@@ -6,6 +6,7 @@ const nextConfig = {
       transform: "react-icons/{{member}}",
     },
   },
+  i18n,
 };
 
 export default nextConfig;

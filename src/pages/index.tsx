@@ -1,19 +1,22 @@
-import { Hero } from "@/sections";
+import Hero from "@/sections/Hero";
 import { HomeProps } from "@/typescript/interfaces/pages";
+import { useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import React, { Suspense } from "react";
+import background from "../../public/images/hero.jpg";
 import data from "../../translationKeys.json";
 const Services = dynamic(() => import("@/sections/Services"), { suspense: true });
 const About = dynamic(() => import("@/sections/About"), { suspense: true });
 const Gallery = dynamic(() => import("@/sections/Gallery"), { suspense: true });
-import background from "../../public/images/hero.jpg";
 
-export const getStaticProps = async () => {
+export const getStaticProps = async ({ locale }) => {
   const primaryServices = await data.services.primary;
   const secondaryServices = await data.services.secondary;
   return {
     props: {
+      ...(await serverSideTranslations(locale, ["standard"])),
       primaryServices,
       secondaryServices,
     },
@@ -21,6 +24,7 @@ export const getStaticProps = async () => {
 };
 
 const Home: React.FC<HomeProps> = ({ primaryServices, secondaryServices }) => {
+  const { t } = useTranslation();
   return (
     <>
       <Head>
@@ -33,7 +37,7 @@ const Home: React.FC<HomeProps> = ({ primaryServices, secondaryServices }) => {
         <Hero
           title={
             <h1>
-              Ultra Tim <span>S</span>
+              {t("Ultra Tim")} <span>S</span>
             </h1>
           }
           subtitle="Naša firma je specijalizovana za pružanje usluga selidbe, transporta, pakovanja i gradjevinskih usluga. Svojim klijentima nudimo najpovoljnije cene uz najviši nivo profesionalizma i pažljivog rukovanja sa njihovim stvarima ili projektima. Naš tim se sastoji od stručnih i iskusnih radnika koji su posvećeni da svaki posao obave sa maksimalnom efikasnošću i pažnjom prema klijentima."

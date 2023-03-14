@@ -1,8 +1,8 @@
-import { Loader } from "@/components";
 import dynamic from "next/dynamic";
 import Head from "next/head";
 import React, { Suspense } from "react";
 const Form = dynamic(() => import("@/components/Form"), { suspense: true });
+const Map = dynamic(() => import("@/components/Map"), { suspense: true });
 
 const Contact: React.FC = () => {
   return (
@@ -11,8 +11,11 @@ const Contact: React.FC = () => {
         <title>Contact</title>
       </Head>
       <main className="contact">
-        <Suspense fallback={<Loader />}>
+        <Suspense fallback="">
           <Form />
+        </Suspense>
+        <Suspense fallback="">
+          <Map />
         </Suspense>
       </main>
     </>
