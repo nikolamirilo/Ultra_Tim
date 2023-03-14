@@ -29,22 +29,20 @@ const Navbar: React.FC = () => {
         <Link href="/">{t("Početna")}</Link>
         <Link href="/offer">{t("Ponuda")}</Link>
         <Link href="/contact">{t("Kontakt")}</Link>
-        <div className="languages">
-          <button
-            onClick={() => {
-              handleChangeLanguage("en");
-            }}
-          >
-            EN
-          </button>
-          <button
-            onClick={() => {
-              handleChangeLanguage("sr");
-            }}
-          >
-            SR
-          </button>
-        </div>
+        <button
+          onClick={() => {
+            handleChangeLanguage("en");
+          }}
+        >
+          EN
+        </button>
+        <button
+          onClick={() => {
+            handleChangeLanguage("sr");
+          }}
+        >
+          SR
+        </button>
       </div>
     </nav>
   );
