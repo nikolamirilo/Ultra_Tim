@@ -10,10 +10,11 @@ const Navbar: React.FC = () => {
   const { route, asPath, query } = router;
   const { t } = useTranslation();
   console.log(router);
-  function handleChangeLanguage(lang: string) {
+  async function handleChangeLanguage(lang: string) {
     if (i18n) {
       i18n.changeLanguage(lang);
-      router.push({ pathname: route, query }, asPath, { locale: lang });
+      await router.push({ pathname: route, query }, asPath, { locale: lang });
+      window.location.reload();
     }
   }
   return (
