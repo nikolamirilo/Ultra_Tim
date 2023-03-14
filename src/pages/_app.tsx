@@ -1,8 +1,12 @@
 import Loader from "@/components/Loader";
+import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import "../styles/index.scss";
+
 const App = ({ Component, pageProps }: AppProps) => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
@@ -20,8 +24,16 @@ const App = ({ Component, pageProps }: AppProps) => {
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/logo.png" />
       </Head>
-      {loading ? <Loader /> : <Component {...pageProps} />}
+      {loading ? (
+        <Loader />
+      ) : (
+        <>
+          <Navbar />
+          <Component {...pageProps} />
+          <Footer />
+        </>
+      )}
     </>
   );
 };
-export default App;
+export default appWithTranslation(App);

@@ -4,10 +4,10 @@ const nextConfig = {
       transform: "react-icons/{{member}}",
     },
   },
-  // i18n: {
-  //   defaultLocale: "sr",
-  //   locales: ["sr", "en"],
-  // },
+  i18n: {
+    locales: ["sr", "en"],
+    defaultLocale: "sr",
+  },
 };
 
 export default nextConfig;

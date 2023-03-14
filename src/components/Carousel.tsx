@@ -5,7 +5,8 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 const Carousel: React.FC<CarouselProps> = ({ index, slides, handleNextSlide, handlePreviousSlide }) => {
   return (
-    <div className="carousel" style={{ backgroundImage: `url(${slides[index].src as string})` }}>
+    <div className="carousel">
+      <Image src={`${slides[index].src as string}`} alt="Carousel Image" fill objectFit="cover" />
       <button className="left-arrow" onClick={handlePreviousSlide}>
         <IoIosArrowBack size={60} className="arrow-icon" />
       </button>

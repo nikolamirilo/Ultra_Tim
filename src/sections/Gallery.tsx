@@ -8,7 +8,6 @@ const Gallery: React.FC = () => {
   const [index, setIndex] = useState(0);
   const [mode, setMode] = useState("automatic");
   const slides = [img1, img2, img3];
-  console.log(slides);
   const handlePreviousSlide = () => {
     setMode("manual");
     if (index === 0) {
@@ -25,7 +24,6 @@ const Gallery: React.FC = () => {
       setIndex(index + 1);
     }
   };
-  console.log(mode);
 
   useEffect(() => {
     if (mode === "automatic") {

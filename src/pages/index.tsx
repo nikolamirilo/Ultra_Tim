@@ -11,12 +11,12 @@ const Services = dynamic(() => import("@/sections/Services"), { suspense: true }
 const About = dynamic(() => import("@/sections/About"), { suspense: true });
 const Gallery = dynamic(() => import("@/sections/Gallery"), { suspense: true });
 
-export const getStaticProps = async () => {
+export const getStaticProps = async ({ locale }: HomeProps) => {
   const primaryServices = await data.services.primary;
   const secondaryServices = await data.services.secondary;
   return {
     props: {
-      // ...(await serverSideTranslations(locale, ["common"])),
+      ...(await serverSideTranslations(locale, ["common"])),
       primaryServices,
       secondaryServices,
     },
@@ -35,12 +35,13 @@ const Home: React.FC<HomeProps> = ({ primaryServices, secondaryServices }) => {
       </Head>
       <main className="home">
         <Hero
+          type="home"
           title={
             <h1>
-              Ultra Tim <span>S</span>
+              {t("Ultra Tim")} <span>S</span>
             </h1>
           }
-          subtitle="Naša firma je specijalizovana za pružanje usluga selidbe, transporta, pakovanja i gradjevinskih usluga. Svojim klijentima nudimo najpovoljnije cene uz najviši nivo profesionalizma i pažljivog rukovanja sa njihovim stvarima ili projektima. Naš tim se sastoji od stručnih i iskusnih radnika koji su posvećeni da svaki posao obave sa maksimalnom efikasnošću i pažnjom prema klijentima."
+          subtitle={t("HeroP1")}
           image={background.src}
         />
         <Suspense fallback="">

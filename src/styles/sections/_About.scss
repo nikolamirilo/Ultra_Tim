@@ -12,6 +12,8 @@
     p {
       width: 80%;
       font-size: 1.2rem;
+      text-align: center;
+
       @include media($md) {
         width: 100%;
         height: auto;
