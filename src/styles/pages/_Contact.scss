@@ -1,4 +1,5 @@
 .contact {
   @include flex(column, center, center);
   @include sectionStyle;
+  gap: 10vh;
 }

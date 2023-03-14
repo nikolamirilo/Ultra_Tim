@@ -37,7 +37,7 @@ const Home: React.FC<HomeProps> = ({ primaryServices, secondaryServices }) => {
         <Hero
           title={
             <h1>
-              {t("Ultra Tim")} <span>S</span>
+              {t("standard:Kontakt")} <span>S</span>
             </h1>
           }
           subtitle="Naša firma je specijalizovana za pružanje usluga selidbe, transporta, pakovanja i gradjevinskih usluga. Svojim klijentima nudimo najpovoljnije cene uz najviši nivo profesionalizma i pažljivog rukovanja sa njihovim stvarima ili projektima. Naš tim se sastoji od stručnih i iskusnih radnika koji su posvećeni da svaki posao obave sa maksimalnom efikasnošću i pažnjom prema klijentima."
