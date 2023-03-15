@@ -1,3 +1,4 @@
 .home {
   width: 100%;
+  @include fadeAnimation(0.5s, 0.1s);
 }

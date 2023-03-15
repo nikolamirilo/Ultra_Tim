@@ -1,9 +1,11 @@
+import { i18n, useTranslation } from "next-i18next";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import logo from "../../public/logo.png";
 import { useRouter } from "next/router";
-import { i18n, useTranslation } from "next-i18next";
+import React from "react";
+import EN from "../../public/images/EN.webp";
+import SR from "../../public/images/SR.webp";
+import logo from "../../public/logo.png";
 
 const Navbar: React.FC = () => {
   const router = useRouter();
@@ -32,17 +34,17 @@ const Navbar: React.FC = () => {
         <Link href="/contact">{t("Kontakt")}</Link>
         <button
           onClick={() => {
-            handleChangeLanguage("en");
-          }}
-        >
-          EN
-        </button>
-        <button
-          onClick={() => {
             handleChangeLanguage("sr");
           }}
         >
-          SR
+          <Image src={SR} alt="Serbian Logo" width={50} height={25} />
+        </button>
+        <button
+          onClick={() => {
+            handleChangeLanguage("en");
+          }}
+        >
+          <Image src={EN} alt="England Logo" width={50} height={25} />
         </button>
       </div>
     </nav>

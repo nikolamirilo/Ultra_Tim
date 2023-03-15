@@ -5,5 +5,9 @@ export interface HomeProps {
   secondaryServices: Service[];
   locale: any;
 }
-export interface ContactProps {}
-export interface OfferProps {}
+export interface ContactProps {
+  locale: any;
+}
+export interface OfferProps {
+  locale: any;
+}

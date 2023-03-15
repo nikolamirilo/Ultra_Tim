@@ -9,6 +9,18 @@ const nextConfig = {
     defaultLocale: "sr",
     localeDetection: false,
   },
+  async rewrites() {
+    return [
+      {
+        source: "/", // automatically handles all locales
+        destination: "/", // automatically passes the locale on
+      },
+      {
+        source: "/contact",
+        destination: "/kontakt",
+      },
+    ];
+  },
 };
 
 export default nextConfig;

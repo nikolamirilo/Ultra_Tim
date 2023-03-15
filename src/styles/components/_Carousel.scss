@@ -1,6 +1,7 @@
 .carousel {
   height: 60vh;
   position: relative;
+  border-radius: 10px;
   @include backgroundObjectImage(60%, 60vh);
   @include fadeAnimation(0.5s, 0s);
   @include media($lg) {
@@ -10,6 +11,9 @@
   @include media($xs) {
     width: 100%;
     height: 40vh;
+  }
+  img {
+    border-radius: 10px;
   }
   .left-arrow {
     position: absolute;
@@ -24,6 +28,7 @@
     @include flex(row, center, center);
     border: none;
     height: 100%;
+    border-radius: 10px;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.568);
     width: 3rem;
