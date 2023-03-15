@@ -3,7 +3,12 @@ import Image from "next/image";
 import React from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
-const Carousel: React.FC<CarouselProps> = ({ index, slides, handleNextSlide, handlePreviousSlide }) => {
+const Carousel: React.FC<CarouselProps> = ({
+  index,
+  slides,
+  handleNextSlide,
+  handlePreviousSlide,
+}) => {
   return (
     <div className="carousel">
       <Image src={`${slides[index].src as string}`} alt="Carousel Image" fill objectFit="cover" />

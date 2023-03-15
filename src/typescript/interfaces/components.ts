@@ -1,9 +1,10 @@
-import React from "react";
 import type { StaticImageData } from "next/image";
+import React from "react";
 
 export interface CardProps {
   title: string;
   subtitle: string;
+  icon: React.ReactNode;
 }
 export interface CarouselProps {
   slides: StaticImageData[];

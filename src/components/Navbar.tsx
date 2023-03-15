@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
   return (
     <nav className="navbar">
       <div className="logo">
-        <Image src={logo} alt="Logo" style={{ margin: "0.5vh 0" }} />
+        <Image src={logo} alt="Logo" style={{ margin: "0.5vh 0" }} priority />
       </div>
       <input id="menu-toggle" type="checkbox" />
       <label className="menu-button-container" htmlFor="menu-toggle">
@@ -37,14 +37,14 @@ const Navbar: React.FC = () => {
             handleChangeLanguage("sr");
           }}
         >
-          <Image src={SR} alt="Serbian Logo" width={50} height={25} />
+          <Image src={SR} alt="Serbian Logo" width={50} height={25} priority />
         </button>
         <button
           onClick={() => {
             handleChangeLanguage("en");
           }}
         >
-          <Image src={EN} alt="England Logo" width={50} height={25} />
+          <Image src={EN} alt="England Logo" width={50} height={25} priority />
         </button>
       </div>
     </nav>
