@@ -1,8 +1,8 @@
+import Footer from "@/components/Footer";
 import Loader from "@/components/Loader";
+import Navbar from "@/components/Navbar";
 import { appWithTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
-import Footer from "@/components/Footer";
-import Navbar from "@/components/Navbar";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import "../styles/index.scss";
@@ -22,7 +22,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
-        <link rel="icon" href="/logo.png" />
+        <link rel="icon" href="/logo.webp" />
       </Head>
       {loading ? (
         <Loader />

@@ -1,14 +1,14 @@
 import { HeroProps } from "@/typescript/interfaces/sections";
+import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
-import { useTranslation } from "next-i18next";
 
 const Hero: React.FC<HeroProps> = ({ type, title, subtitle, image }) => {
   const { t } = useTranslation();
   return (
     <section id="hero">
-      <Image src={image} alt="Transport" fill objectFit="cover" />
+      <Image src={image} alt="Transport" fill objectFit="cover" priority />
       <div className="hero-content">
         <>{title}</>
         <h2>{subtitle}</h2>

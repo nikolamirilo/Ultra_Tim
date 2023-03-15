@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import EN from "../../public/images/EN.webp";
 import SR from "../../public/images/SR.webp";
-import logo from "../../public/logo.png";
+import logo from "../../public/logo.webp";
 
 const Navbar: React.FC = () => {
   const router = useRouter();

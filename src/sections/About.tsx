@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import BW from "../../public/images/BW.jpg";
+import BW from "../../public/images/BW.webp";
 
 const About: React.FC = () => {
   return (

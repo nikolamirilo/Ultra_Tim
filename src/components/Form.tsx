@@ -1,7 +1,7 @@
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import React from "react";
-import logo from "../../public/logo.png";
+import logo from "../../public/logo.webp";
 
 const Form: React.FC = () => {
   const { t } = useTranslation();
