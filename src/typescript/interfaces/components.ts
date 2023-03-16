@@ -12,3 +12,4 @@ export interface CarouselProps {
   handlePreviousSlide: React.MouseEventHandler<HTMLButtonElement>;
   handleNextSlide: React.MouseEventHandler<HTMLButtonElement>;
 }
+export interface FormProps {}

@@ -10,6 +10,7 @@
     "export": "i18nexus pull -k 1IIAHkkhIQcCE26i8rbvpw && next export"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@types/node": "18.13.0",
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
