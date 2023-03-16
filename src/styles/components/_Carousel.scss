@@ -14,6 +14,13 @@
   }
   img {
     border-radius: 10px;
+    @include fadeAnimation(1s, 0s);
+  }
+  .active {
+    display: block;
+  }
+  .inactive {
+    display: none;
   }
   .left-arrow {
     position: absolute;

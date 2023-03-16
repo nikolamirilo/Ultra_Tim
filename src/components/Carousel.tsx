@@ -11,7 +11,18 @@ const Carousel: React.FC<CarouselProps> = ({
 }) => {
   return (
     <div className="carousel">
-      <Image src={`${slides[index].src as string}`} alt="Carousel Image" fill objectFit="cover" />
+      {slides.map((slide, idx) => {
+        return (
+          <Image
+            key={idx}
+            src={`${slide.src as string}`}
+            className={idx === index ? "active" : "inactive"}
+            alt="Carousel Image"
+            fill
+            objectFit="cover"
+          />
+        );
+      })}
       <button className="left-arrow" onClick={handlePreviousSlide}>
         <IoIosArrowBack size={60} className="arrow-icon" />
       </button>
