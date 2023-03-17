@@ -3,7 +3,7 @@ import Link from "next/link";
 import React from "react";
 import { AiOutlineGithub, AiOutlineInstagram } from "react-icons/ai";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
-import logo from "../../public/logo.webp";
+import logo from "../../public/images/logo.webp";
 
 const Footer: React.FC = () => {
   return (

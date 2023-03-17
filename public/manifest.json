@@ -1,11 +1,12 @@
 {
-  "name": "Ultra Tim",
-  "short_name": "Ultra Tim",
-  "theme_color": "#fff",
-  "background_color": "#fff",
+  "name": "Ultra Tim S",
+  "short_name": "Ultra Tim S",
+  "theme_color": "#4169e1",
+  "background_color": "#4169e1",
+  "orientation": "portrait",
   "start_url": "/",
   "display": "standalone",
-  "description": "Empowering IT projects to success by utilizing my skills in project management and programming to drive successful results by effective planning and executing projects, delivering on deadlines and goals, and developing customized solutions through programming.",
+  "description": "Naša firma je specijalizovana za pružanje usluga selidbe, transporta, pakovanja i gradjevinskih usluga. Svojim klijentima nudimo najpovoljnije cene uz najviši nivo profesionalizma i pažljivog rukovanja sa njihovim stvarima ili projektima. Naš tim se sastoji od stručnih i iskusnih radnika koji su posvećeni da svaki posao obave sa maksimalnom efikasnošću i pažnjom prema klijentima.",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",

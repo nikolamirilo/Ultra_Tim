@@ -2,7 +2,7 @@ import emailjs from "@emailjs/browser";
 import { useTranslation } from "next-i18next";
 import Image from "next/image";
 import React, { useRef, useState } from "react";
-import logo from "../../public/logo.webp";
+import logo from "../../public/images/logo.webp";
 import { FormProps } from "./../typescript/interfaces/components";
 
 const Form: React.FC<FormProps> = () => {
