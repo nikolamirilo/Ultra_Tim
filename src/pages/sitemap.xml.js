@@ -11,13 +11,13 @@ function generateSiteMap() {
        <priority>1</priority>
      </url>
      <url>
-       <loc>https://ultra-tim.com/offer</loc>
+       <loc>https://ultra-tim.com/ponuda</loc>
        <lastmod>${date}</lastmod>
        <changefreq>weekly</changefreq>
        <priority>0.9</priority>
      </url>
      <url>
-       <loc>https://ultra-tim.com/contact</loc>
+       <loc>https://ultra-tim.com/kontakt</loc>
        <lastmod>${date}</lastmod>
        <changefreq>weekly</changefreq>
        <priority>0.8</priority>
