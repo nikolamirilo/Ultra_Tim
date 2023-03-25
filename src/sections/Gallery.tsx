@@ -1,14 +1,14 @@
-import React, { useRef, useState } from "react";
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
+import React, { useRef } from "react";
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import { Swiper, SwiperSlide } from "swiper/react";
 import img1 from "../../public/images/gallery/1.jpg";
 import img2 from "../../public/images/gallery/2.jpg";
 import img3 from "../../public/images/gallery/3.webp";
-import { Autoplay, EffectFade, Lazy, Navigation, Pagination } from "swiper";
 
 const Gallery: React.FC = () => {
   const progressCircle = useRef<SVGSVGElement | null>(null);
