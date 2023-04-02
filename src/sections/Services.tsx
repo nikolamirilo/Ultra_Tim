@@ -40,17 +40,12 @@ const Services: React.FC<ServicesProps> = ({ data, type }) => {
   return (
     <section id="services">
       <h1>
-        {type === "primary"
-          ? t("Primarne delatnosti")
-          : type === "secondary"
-          ? t("Sekundarne delatnosti")
-          : null}
+        {type === "primary" ? t("Primarne delatnosti") : type === "secondary" ? t("Sekundarne delatnosti") : null}
       </h1>
       <div className="cards-container">
         {translatedData &&
           translatedData.map((item, idx) => {
             const icon = generateIcon(item.title);
-            console.log(icon);
             return <Card key={idx} title={item.title} subtitle={item.subtitle} icon={icon} />;
           })}
       </div>

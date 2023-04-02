@@ -11,7 +11,6 @@ const Navbar: React.FC = () => {
   const router = useRouter();
   const { route, asPath, query } = router;
   const { t } = useTranslation();
-  console.log(router);
   async function handleChangeLanguage(lang: string) {
     if (i18n) {
       i18n.changeLanguage(lang);

@@ -12,6 +12,9 @@
     .image {
       @include backgroundObjectImage(90%, 40vh);
       position: relative;
+      @include media($xs) {
+        @include backgroundObjectImage(96vw, 35vh);
+      }
       img {
         border-radius: 10px;
       }
