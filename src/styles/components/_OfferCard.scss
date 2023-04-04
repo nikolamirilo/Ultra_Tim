@@ -28,6 +28,9 @@
     }
     p {
       font-size: 1.2rem;
+      @include media($xs) {
+        text-align: center;
+      }
     }
   }
 }
