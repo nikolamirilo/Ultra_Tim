@@ -38,20 +38,14 @@ const Form: React.FC<FormProps> = () => {
   };
 
   if (isFormSubmited) {
-    alert("Form Submited");
+    alert("Poslata poruka");
   }
 
   return (
     <div className="form">
       <form className="left-content" ref={form} onSubmit={handleFormSubmit}>
         <h1>{t("Kontaktirajte nas")}</h1>
-        <input
-          type="text"
-          id="nameInput"
-          placeholder={t("Unesi ime*") as string}
-          name="name"
-          required={true}
-        />
+        <input type="text" id="nameInput" placeholder={t("Unesi ime*") as string} name="name" required={true} />
         <input
           type="email"
           id="emailInput"

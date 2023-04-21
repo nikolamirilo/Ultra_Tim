@@ -10,7 +10,7 @@
     @include flex(column, center, center);
     height: 100%;
     .image {
-      @include backgroundObjectImage(90%, 40vh);
+      @include backgroundObjectImage(80%, 60vh);
       position: relative;
       @include media($xs) {
         @include backgroundObjectImage(96vw, 35vh);
