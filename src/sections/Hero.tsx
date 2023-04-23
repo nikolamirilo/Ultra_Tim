@@ -10,7 +10,7 @@ const Hero: React.FC<HeroProps> = ({ type, title, subtitle, image }) => {
     <section id="hero">
       <Image src={image} alt="Transport" fill objectFit="cover" priority />
       <div className="hero-content">
-        <>{title}</>
+        <h1>{title}</h1>
         <h2>{subtitle}</h2>
         {type === "home" ? (
           <div className="hero-buttons">
