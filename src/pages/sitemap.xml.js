@@ -1,5 +1,5 @@
 import moment from "moment";
-const date = moment().format("YYYY-MM-DDThh:mm:ssTZD");
+const date = moment().format("MMMM Do YYYY, h:mm:ss a");
 
 function generateSiteMap() {
   return `<?xml version="1.0" encoding="UTF-8"?>
