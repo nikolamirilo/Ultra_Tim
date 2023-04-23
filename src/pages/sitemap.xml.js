@@ -5,7 +5,7 @@ function generateSiteMap() {
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
      <url>
-       <loc>https://ultra-tim.com/</loc>
+       <loc>https://ultra-tim-s.com/</loc>
        <lastmod>${date}</lastmod>
        <changefreq>weekly</changefreq>
        <priority>1</priority>
