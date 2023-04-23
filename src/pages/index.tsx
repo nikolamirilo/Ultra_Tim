@@ -29,6 +29,7 @@ const Home: React.FC<HomeProps> = ({ primaryServices, secondaryServices }) => {
     <>
       <Head>
         <title>{t("Ultra Tim")} S</title>
+        <meta name="description" content={t("HeroP1")} />
       </Head>
       <main className="home">
         <Hero

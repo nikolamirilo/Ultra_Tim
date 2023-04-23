@@ -21,6 +21,7 @@ const Contact: React.FC = () => {
     <>
       <Head>
         <title>{t("Kontakt")}</title>
+        <meta name="description" content={t("HeroP1")} />
       </Head>
       <main className="contact">
         <Suspense fallback="">

@@ -6,7 +6,7 @@
   "orientation": "portrait",
   "start_url": "/",
   "display": "standalone",
-  "description": "Naša firma je specijalizovana za pružanje usluga selidbe, transporta, pakovanja i gradjevinskih usluga. Svojim klijentima nudimo najpovoljnije cene uz najviši nivo profesionalizma i pažljivog rukovanja sa njihovim stvarima ili projektima. Naš tim se sastoji od stručnih i iskusnih radnika koji su posvećeni da svaki posao obave sa maksimalnom efikasnošću i pažnjom prema klijentima.",
+  "description": "Naša firma je specijalizovana za pružanje usluga selidbe, transporta, i pakovanja. Svojim klijentima nudimo najpovoljnije cene uz najviši nivo profesionalizma.",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",
