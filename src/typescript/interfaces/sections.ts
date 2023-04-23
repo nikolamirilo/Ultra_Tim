@@ -6,7 +6,8 @@ export interface ServicesProps {
 }
 export interface HeroProps {
   type: string;
-  title: object;
+  title: string;
+  span: string;
   subtitle: string;
   image: string;
 }

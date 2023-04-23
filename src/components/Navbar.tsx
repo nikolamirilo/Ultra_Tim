@@ -19,7 +19,6 @@ const Navbar: React.FC = () => {
       window.location.reload();
     }
   }
-  console.log(isOpen);
   return (
     <nav className="navbar">
       <div className="logo">
