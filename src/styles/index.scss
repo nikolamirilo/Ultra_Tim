@@ -14,6 +14,44 @@ html {
   font-family: "Inter", sans-serif;
 }
 body {
+  position: relative;
+  .whatsapp-button {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+    height: fit-content;
+    width: fit-content;
+    background-color: transparent;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 100%;
+    border: none;
+    padding: 0;
+    @include media($sm) {
+      bottom: 12px;
+      right: 15px;
+    }
+    @include media($xs) {
+      bottom: 7.5px;
+      right: 10px;
+    }
+    img {
+      width: 75px;
+      height: auto;
+      @include media($lg) {
+        width: 65px;
+        height: auto;
+      }
+      @include media($md) {
+        width: 60px;
+        height: auto;
+      }
+      @include media($xs) {
+        width: 55px;
+        height: auto;
+      }
+    }
+  }
   main {
     min-height: 75vh;
     height: fit-content;

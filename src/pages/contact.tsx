@@ -17,11 +17,12 @@ export const getStaticProps = async ({ locale }: ContactProps) => {
 
 const Contact: React.FC = () => {
   const { t } = useTranslation();
+  const metaDescription = t("HeroP1") ? t("HeroP1") : "";
   return (
     <>
       <Head>
         <title>{t("Kontakt")}</title>
-        <meta name="description" content={t("HeroP1")} />
+        <meta name="description" content={metaDescription} />
       </Head>
       <main className="contact">
         <Suspense fallback="">

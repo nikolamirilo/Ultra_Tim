@@ -23,11 +23,12 @@ export const getStaticProps = async ({ locale }: OfferProps) => {
 const Offer: React.FC<OfferProps> = () => {
   const { t } = useTranslation();
   const images = [img1, img2, img3, img4, img5, img6];
+  const metaDescription = t("HeroP1") ? t("HeroP1") : "";
   return (
     <>
       <Head>
         <title>{t("Ponuda")}</title>
-        <meta name="description" content={t("HeroP1")} />
+        <meta name="description" content={metaDescription} />
       </Head>
       <main className="offer">
         <div className="offer-cards">

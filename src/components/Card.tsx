@@ -5,7 +5,12 @@ import React from "react";
 const Card: React.FC<CardProps> = ({ title, subtitle, icon }) => {
   const router = useRouter();
   return (
-    <div className="card">
+    <div
+      className="card"
+      onClick={() => {
+        router.push("/offer");
+      }}
+    >
       <div className="icon">{icon as React.ReactNode}</div>
       <div className="card-text">
         <h2>{title}</h2>

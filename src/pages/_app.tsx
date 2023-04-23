@@ -6,6 +6,9 @@ import type { AppProps } from "next/app";
 import Head from "next/head";
 import { useEffect, useState } from "react";
 import "../styles/index.scss";
+import ReactWhatsapp from "react-whatsapp";
+import Image from "next/image";
+import wha_image from "public/images/wha-logo.webp";
 
 const App = ({ Component, pageProps }: AppProps) => {
   const [loading, setLoading] = useState(true);
@@ -13,11 +16,12 @@ const App = ({ Component, pageProps }: AppProps) => {
     setTimeout(() => setLoading(false), 1000);
   });
   const { t } = useTranslation();
+  const metaDescription = t("HeroP1") ? t("HeroP1") : "";
   return (
     <>
       <Head>
         <title>{t("Ultra Tim S")}</title>
-        <meta name="description" content={t("HeroP1")} />
+        <meta name="description" content={metaDescription} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="icon" href="/images/icons/icon-192x192.png" />
@@ -25,11 +29,14 @@ const App = ({ Component, pageProps }: AppProps) => {
       {loading ? (
         <Loader />
       ) : (
-        <>
+        <body>
           <Navbar />
           <Component {...pageProps} />
+          <ReactWhatsapp className="whatsapp-button" number="+381-61-23-00-777" element="webview">
+            <Image src={wha_image} alt="Whatsapp" />
+          </ReactWhatsapp>
           <Footer />
-        </>
+        </body>
       )}
     </>
   );
