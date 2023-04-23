@@ -1,5 +1,5 @@
 import moment from "moment";
-const date = moment().format("MMM Do YY");
+const date = moment().format("YYYY-MM-DDThh:mm:ssTZD");
 
 function generateSiteMap() {
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -11,13 +11,13 @@ function generateSiteMap() {
        <priority>1</priority>
      </url>
      <url>
-       <loc>https://ultra-tim.com/offer</loc>
+       <loc>https://ultra-tim-s.com/offer</loc>
        <lastmod>${date}</lastmod>
        <changefreq>weekly</changefreq>
        <priority>0.9</priority>
      </url>
      <url>
-       <loc>https://ultra-tim.com/contact</loc>
+       <loc>https://ultra-tim-s.com/contact</loc>
        <lastmod>${date}</lastmod>
        <changefreq>weekly</changefreq>
        <priority>0.8</priority>
