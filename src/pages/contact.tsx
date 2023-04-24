@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
   return (
     <>
       <Head>
-        <title>{t("Kontakt")}</title>
+        <title>{t("ContactTitle")}</title>
         <meta name="description" content={metaDescription} />
       </Head>
       <main className="contact">

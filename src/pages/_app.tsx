@@ -19,7 +19,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
       <Head>
-        <title>{t("Ultra Tim S")}</title>
+        <title>{t("SiteTitle")}</title>
         <meta name="description" content={metaDescription} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="manifest" href="/manifest.json" />

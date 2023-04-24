@@ -28,7 +28,7 @@ const Offer: React.FC<OfferProps> = () => {
   return (
     <>
       <Head>
-        <title>{t("Ponuda")}</title>
+        <title>{t("OfferTitle")}</title>
         <meta name="description" content={metaDescription} />
       </Head>
       <main className="offer">
