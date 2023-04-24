@@ -4,19 +4,18 @@ import Navbar from "@/components/Navbar";
 import { appWithTranslation, useTranslation } from "next-i18next";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { useEffect, useState } from "react";
-import "../styles/index.scss";
-import ReactWhatsapp from "react-whatsapp";
 import Image from "next/image";
 import wha_image from "public/images/wha-logo.webp";
-
+import { useEffect, useState } from "react";
+import ReactWhatsapp from "react-whatsapp";
+import "../styles/index.scss";
 const App = ({ Component, pageProps }: AppProps) => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setTimeout(() => setLoading(false), 1000);
   });
   const { t } = useTranslation();
-  const metaDescription = t("HeroP1") ? t("HeroP1") : "";
+  const metaDescription = t("SiteDescription") ? t("SiteDescription") : "";
   return (
     <>
       <Head>

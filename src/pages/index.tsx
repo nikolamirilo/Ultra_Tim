@@ -25,7 +25,7 @@ export const getStaticProps = async ({ locale }: HomeProps) => {
 
 const Home: React.FC<HomeProps> = ({ primaryServices, secondaryServices }) => {
   const { t } = useTranslation();
-  const metaDescription = t("HeroP1") ? t("HeroP1") : "";
+  const metaDescription = t("SiteDescription") ? t("SiteDescription") : "";
   return (
     <>
       <Head>
@@ -33,7 +33,13 @@ const Home: React.FC<HomeProps> = ({ primaryServices, secondaryServices }) => {
         <meta name="description" content={metaDescription} />
       </Head>
       <main className="home">
-        <Hero type="home" title={t("Ultra Tim")} span="S" subtitle={t("HeroP1")} image={background.src} />
+        <Hero
+          type="home"
+          title={t("Ultra Tim")}
+          span="S"
+          subtitle={t("HeroP1")}
+          image={background.src}
+        />
         <Suspense fallback="">
           <About />
         </Suspense>

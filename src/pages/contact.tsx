@@ -17,7 +17,7 @@ export const getStaticProps = async ({ locale }: ContactProps) => {
 
 const Contact: React.FC = () => {
   const { t } = useTranslation();
-  const metaDescription = t("HeroP1") ? t("HeroP1") : "";
+  const metaDescription = t("SiteDescription") ? t("SiteDescription") : "";
   return (
     <>
       <Head>

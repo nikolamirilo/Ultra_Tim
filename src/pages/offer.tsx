@@ -1,6 +1,7 @@
 import { OfferProps } from "@/typescript/interfaces/pages";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import dynamic from "next/dynamic";
 import Head from "next/head";
 import React, { Suspense } from "react";
 import img1 from "../../public/images/offer/1.webp";
@@ -10,7 +11,6 @@ import img4 from "../../public/images/offer/4.webp";
 import img5 from "../../public/images/offer/5.webp";
 import img6 from "../../public/images/offer/6.webp";
 import data from "../../translationKeys.json";
-import dynamic from "next/dynamic";
 const OfferCard = dynamic(() => import("@/components/OfferCard"));
 
 export const getStaticProps = async ({ locale }: OfferProps) => {
@@ -24,7 +24,7 @@ export const getStaticProps = async ({ locale }: OfferProps) => {
 const Offer: React.FC<OfferProps> = () => {
   const { t } = useTranslation();
   const images = [img1, img2, img3, img4, img5, img6];
-  const metaDescription = t("HeroP1") ? t("HeroP1") : "";
+  const metaDescription = t("SiteDescription") ? t("SiteDescription") : "";
   return (
     <>
       <Head>
