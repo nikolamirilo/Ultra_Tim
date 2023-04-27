@@ -49,7 +49,6 @@ const Offer: React.FC<OfferProps> = () => {
             : null}
         </div>
       </main>
-      ;
     </>
   );
 };
