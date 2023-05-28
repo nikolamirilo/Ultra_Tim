@@ -6,14 +6,13 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/react";
-import img1 from "../../public/images/offer/1.webp";
-import img2 from "../../public/images/offer/2.webp";
-import img3 from "../../public/images/offer/3.webp";
-import img4 from "../../public/images/offer/4.webp";
-import img5 from "../../public/images/offer/5.webp";
-import img6 from "../../public/images/offer/6.webp";
+import img1 from "../../public/images/gallery/1.jpg";
+import img2 from "../../public/images/gallery/2.jpg";
+import img3 from "../../public/images/gallery/3.jpg";
+import img4 from "../../public/images/gallery/4.jpg";
+import img5 from "../../public/images/gallery/5.jpg";
+import img6 from "../../public/images/gallery/6.jpg";
 import img7 from "../../public/images/gallery/7.jpg";
-import img8 from "../../public/images/gallery/8.jpg";
 
 const Gallery: React.FC = () => {
   const progressCircle = useRef<SVGSVGElement | null>(null);
@@ -24,7 +23,7 @@ const Gallery: React.FC = () => {
       progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
     }
   };
-  const slides = [img8, img7, img6, img5, img4, img3, img2, img1];
+  const slides = [img1, img2, img3, img4, img5, img6, img7];
   return (
     <section id="gallery">
       <Swiper
